@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Acerte o número</title>
+  </head>
+  <body onload="inicial()"> <!-- ao carregar o body iniciará a função no js -->
+    <main>
+      <div id="welcomeScreen">
+        <h2>ACERTE O NÚMERO <br />1 - 100</h2>
+      </div>
+
+      <div id="gameArea">
+        <section>
+          <h3 id="textOutput">Qual seu palpite?</h3>
+          <input type="number" id="inputBox" min="1" max="100" onchange="numComparar()" />
+        </section>
+        <section class="stats">
+          <div class="info">
+            <p>Tentativas:</p>
+            <span id="attempts">10</span>
+          </div>
+          <div class="info">
+            <p>Seus palpites:</p>
+            <span id="txtTentativas">0</span>
+          </div>
+        </section>
+        <button id="newGameButton" onclick="novoJogo()">NOVO JOGO</button>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
